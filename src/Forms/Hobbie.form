@@ -75,6 +75,7 @@
         </constraints>
         <properties>
           <text value=""/>
+          <visible value="true"/>
         </properties>
       </component>
       <component id="a1def" class="javax.swing.JLabel" binding="VIDEOjuego">

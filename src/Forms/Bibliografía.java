@@ -56,5 +56,6 @@ public class Bibliografía {
     }
 
     public void setVisible(boolean b) {
+        
     }
 }

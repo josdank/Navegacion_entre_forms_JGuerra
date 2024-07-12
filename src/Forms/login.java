@@ -13,6 +13,7 @@ public class login {
     private JButton credencialesButton;
     private JLabel img1;
     private JLabel img2;
+    private JLabel mensaje;
 
     public login() {
 
@@ -27,14 +28,14 @@ public class login {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nombreUsuario = "Josueso";
+                String Usuario = "Josueso";
                 String correoUsuario = "josue.guerra@epn.edu.ec";
-                String contraseñaUsuario = "159687";
+                String contraUsuario = "159687Js";
 
                 String inputUsuario = usuario.getText();
                 String inputContraseña = new String(contrasenia.getPassword());
 
-                if ((inputUsuario.equals(nombreUsuario) || inputUsuario.equals(correoUsuario)) && inputContraseña.equals(contraseñaUsuario)) {
+                if ((inputUsuario.equals(Usuario) || inputUsuario.equals(correoUsuario)) && inputContraseña.equals(contraUsuario)) {
                     JFrame frame = new JFrame("Biografía");
                     frame.setContentPane(new Bibliografía().mainPanel1);
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,15 +55,29 @@ public class login {
         mostrarContraseñaRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                if (mostrarContraseñaRadioButton.isSelected()) {
+                    contrasenia.setEchoChar((char) 0);
+                } else {
+                    contrasenia.setEchoChar('•');
+                }
             }
         });
+
         credencialesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String nombreUsuario = "Josueso";
+                String correoUsuario = "josue.guerra@epn.edu.ec";
+                String contraseñaUsuario = "159687Js";
 
+                String mensaje = "Usuario: " + nombreUsuario + "\n" +
+                        "Correo: " + correoUsuario + "\n" +
+                        "Contraseña: " + contraseñaUsuario;
+
+                JOptionPane.showMessageDialog(null, mensaje, "Credenciales", JOptionPane.INFORMATION_MESSAGE);
             }
         });
+
     }
 }
 

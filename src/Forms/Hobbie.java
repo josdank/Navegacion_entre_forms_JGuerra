@@ -18,7 +18,7 @@ public class Hobbie {
         icon = new ImageIcon(icon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH));
         VIDEOjuego.setIcon(icon);
 
-        icon = new ImageIcon("src/libro.jpg");
+        icon = new ImageIcon("src/libros.jpg");
         icon = new ImageIcon(icon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH));
         Libro.setIcon(icon);
 
